@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAD3D3D3"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/InvoiceNumber"
+        android:layout_width="258dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="77dp"
+        android:ems="10"
+        android:hint="請輸入發票數字(共8碼)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YearMonth" />
+
+    <EditText
+        android:id="@+id/YearMonth"
+        android:layout_width="249dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="81dp"
+        android:ems="10"
+        android:hint="請輸入發票年月(Ex:2023-1)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="114dp"
+        android:background="@drawable/beauty"
+        android:text="發票兌獎器"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CheckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="8dp"
+        android:text="兌獎"
+        app:layout_constraintBottom_toTopOf="@+id/ShowButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InvoiceNumber" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="409dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/video" />
+
+    <Button
+        android:id="@+id/ShowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="14dp"
+        android:text="顯示該月份中獎號碼"
+        app:layout_constraintBottom_toTopOf="@+id/Information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Information"
+        android:layout_width="378dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="20dp"
+        android:maxLines="100"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/Heart"
+        android:layout_width="128dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="143dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowButton"
+        app:layout_constraintVertical_bias="0.878"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/Star"
+        android:layout_width="128dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="143dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowButton"
+        app:layout_constraintVertical_bias="0.878"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/Error"
+        android:layout_width="128dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="143dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowButton"
+        app:layout_constraintVertical_bias="0.878"
+        app:srcCompat="@drawable/error" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
